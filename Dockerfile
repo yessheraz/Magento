@@ -8,7 +8,6 @@ RUN apt-get install -y \
     mysql-server \
     php7.2 \
     php7.2-bcmath \
-    php7.2-mcrypt \
     php7.2-cli \
     php7.2-common
 COPY start-script.sh /root/
