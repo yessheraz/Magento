@@ -14,4 +14,7 @@ RUN apt-get install -y \
 COPY start-script.sh /root/
 RUN chmod +x /root/start-script.sh 
 COPY . /var/www/html/
-CMD /root/start-script.sh
+#CMD /root/start-script.sh
+CMD service mysql start
+CMD a2enmod rewrite
+CMD service apache2 start
