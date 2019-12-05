@@ -3,6 +3,7 @@ RUN  apt-get update
 RUN apt-get install software-properties-common -y
 RUN add-apt-repository -y ppa:ondrej/php
 RUN apt-get update
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get install -y \
     apache2 \
     mysql-server \
