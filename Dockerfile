@@ -11,10 +11,11 @@ RUN apt-get install -y \
     php7.2-bcmath \
     php7.2-cli \
     php7.2-common
-COPY start-script.sh /root/
-RUN chmod +x /root/start-script.sh 
+#COPY start-script.sh /root/
+#RUN chmod +x /root/start-script.sh 
 COPY . /var/www/html/
 #CMD /root/start-script.sh
 CMD service mysql start
 CMD a2enmod rewrite
-CMD service apache2 start
+#CMD service apache2 start
+CMD ["apachectl","-D","FOREGROUND"]
