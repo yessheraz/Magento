@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 RUN  apt-get update 
-RUN apt-get install software-properties-common python-software-properties
+RUN apt-get install software-properties-common
 RUN add-apt-repository -y ppa:ondrej/php
 RUN apt-get update
 RUN apt-get install -y \
