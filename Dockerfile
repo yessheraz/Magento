@@ -1,3 +1,2 @@
-FROM sensson/magento2
-COPY . /var/www/html/
+FROM php:7.2-apache
 
